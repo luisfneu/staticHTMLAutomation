@@ -1,2 +1,5 @@
 # POC
-space destinated to lean something new
+space destinated to learn something new
+
+start to configure local environment 
+
