@@ -3,4 +3,9 @@ space destinated to learn something new
 
 start to configure local environment 
 
-aws_s3_bucket.lneutfbkt: Creation complete after 6s [id=mytftest2025003]
+wsendpoint = "mytftest2025003.s3-website-us-west-2.amazonaws.com"
+
+
+TO_DO 
+
+ver pq nao carrega style
