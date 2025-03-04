@@ -39,6 +39,10 @@ resource "aws_s3_bucket_acl" "bckacl" {
 }
 
 resource "aws_s3_object" "index" {
+depends_on = [
+    aws_s3_bucket_ownership_controls.ownerctrl,
+    aws_s3_bucket_public_access_block.bkcablock,
+  ]
     bucket = aws_s3_bucket.lneutfbkt.id 
     key             = "index.html"
     source          = "index.html"
@@ -46,15 +50,11 @@ resource "aws_s3_object" "index" {
     content_type    = "text/html"
 }
 
-resource "aws_s3_object" "style" {
-    bucket = aws_s3_bucket.lneutfbkt.id 
-    key             = "styles.css"
-    source          = "styles.css"
-    acl             = "public-read"
-    content_type    = "text/html"
-}
-
 resource "aws_s3_object" "error" {
+ depends_on = [
+    aws_s3_bucket_ownership_controls.ownerctrl,
+    aws_s3_bucket_public_access_block.bkcablock,
+  ]
     bucket = aws_s3_bucket.lneutfbkt.id 
     key             = "error.html"
     source          = "error.html"
