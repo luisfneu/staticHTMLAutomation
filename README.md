@@ -16,6 +16,12 @@ Static website with S3 public
 ## run
 
 * is simple
+
+ ##### plan tf code to check your infrastructure amd your code to identify changes and build a execution plan
+    terraform plan
+
+* check carefully if evething is ok
+    
 ##### apply code with terraform in AWS
     terraform apply
     
